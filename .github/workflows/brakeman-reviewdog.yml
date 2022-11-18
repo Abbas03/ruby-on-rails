@@ -15,3 +15,4 @@ jobs:
         uses: reviewdog/action-brakeman@v2
         with:
          brakeman_flags: '--format tabs'
+         level: info
