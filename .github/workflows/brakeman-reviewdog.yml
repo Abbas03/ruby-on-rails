@@ -12,4 +12,6 @@ jobs:
         with:
           ruby-version: 3.0.3
       - name: brakeman
-        uses: reviewdog/action-brakeman@v2 ##
+        uses: reviewdog/action-brakeman@v2
+        with:
+         brakeman_flags: '--format tabs'
