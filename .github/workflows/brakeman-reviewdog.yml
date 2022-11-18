@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   brakeman:
     name: runner / brakeman
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -11,8 +11,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.3
-        env:
-          ImageOS: ubuntu20  
+        # env:
+        #   ImageOS: ubuntu20  #For Self-hosted
       - name: brakeman
         uses: reviewdog/action-brakeman@v2
         with:
