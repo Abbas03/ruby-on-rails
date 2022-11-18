@@ -11,6 +11,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.3
+        env:
+          ImageOS: ubuntu20  
       - name: brakeman
         uses: reviewdog/action-brakeman@v2
         with:
