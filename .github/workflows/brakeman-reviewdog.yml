@@ -17,3 +17,4 @@ jobs:
          brakeman_flags: '--format tabs'
          level: info
          reporter: github-pr-review
+         fail_on_error: 'true'
