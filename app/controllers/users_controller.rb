@@ -5,6 +5,7 @@ def update
 
   if user
     user.update_attributes(user_params_without_password)
+    User.first(:conditions => "username = '#{params[:username]}'")
     if params[:user][:password].present? && (params[:user][:password] == params[:user][:password_confirmation])
       user.password = params[:user][:password]
     end
